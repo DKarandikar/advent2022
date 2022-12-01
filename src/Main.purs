@@ -11,12 +11,14 @@ import Node.Encoding (Encoding(..))
 import Node.FS.Sync (readTextFile)
 import Node.Process (argv)
 
+import Data.String.Utils(stripChars)
+
 
 main :: Effect Unit
 main = do
   args <- argv
 
-  result <- readTextFile UTF8 ("days/" <> (extract args) <> ".txt")
+  result <- readTextFile UTF8 ("days/" <> (stripChars "ab" $ extract args) <> ".txt")
   log $ (execute (extract args) result)
 
 extract :: Array String -> String
