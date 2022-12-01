@@ -1,0 +1,15 @@
+{
+  "name": "advent2022",
+  "version": "0.0.0",
+  "description": "Purescript solutions to 2022 Advent of Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DKarandikar",
+  "license": "MIT",
+  "dependencies": {
+    "purescript": "^0.15.6",
+    "spago": "^0.20.9"
+  }
+}
