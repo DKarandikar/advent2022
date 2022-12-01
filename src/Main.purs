@@ -4,14 +4,14 @@ import Prelude
 
 import Data.Array (head, drop)
 import Data.Maybe (Maybe(..))
-import Day1 (exec1a)
+import Data.String.Utils (stripChars)
 import Effect (Effect)
 import Effect.Console (log)
 import Node.Encoding (Encoding(..))
 import Node.FS.Sync (readTextFile)
 import Node.Process (argv)
 
-import Data.String.Utils(stripChars)
+import Day1 (exec1a, exec1b)
 
 
 main :: Effect Unit
@@ -31,4 +31,5 @@ execute :: String -> String -> String
 execute x file = 
   case x of 
     "1a" -> exec1a file
+    "1b" -> exec1b file
     _ -> "Invalid"
